@@ -244,6 +244,7 @@ h6 {
     min-height: 100vh;
     /* Changed from height to min-height to prevent overflow */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -631,8 +632,6 @@ h6 {
 
 .logo-carousel-container {
     width: 100%;
-    max-width: var(--container-width);
-    margin: 0 auto;
     overflow: hidden;
     position: relative;
     white-space: nowrap;
@@ -678,7 +677,22 @@ h6 {
     color: #444;
     transition: all 0.3s ease;
     filter: grayscale(100%);
-    opacity: 0.6;
+    opacity: 1;
+}
+
+.client-logo img {
+    height: 40px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
 }
 
 .client-logo:hover {
@@ -1097,8 +1111,16 @@ h6 {
 
 @media (max-width: 768px) {
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-col:last-child {
+        grid-column: span 2;
     }
 }
 
