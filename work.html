@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSW58P7RG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WFSW58P7RG');
+    </script>
+
+    <!-- SEO Meta Tags -->
+    <title>Our Work | MadO Brands - Creative Portfolio</title>
+    <meta name="description"
+        content="Explore the MadO Brands portfolio. See our latest projects in branding, packaging design, digital marketing, and more. Modern and creative solutions for bold brands.">
+    <meta name="keywords"
+        content="MadO Brands Portfolio, Creative Work Kerala, Branding Projects, Packaging Design Gallery, Digital Marketing Case Studies">
+    <meta name="author" content="MadO Brands">
+    <link rel="canonical" href="https://madobrands.in/work.html">
+
+    <!-- Open Graph (Social Media) -->
+    <meta property="og:title" content="Our Work | MadO Brands">
+    <meta property="og:description"
+        content="A showcase of our best work in branding, packaging, and digital experiences. Think Madly with us.">
+    <meta property="og:image" content="https://madobrands.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://madobrands.in/work.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: #888;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            background: rgba(255, 69, 0, 0.05);
+        }
+
+        .portfolio-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid-full {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">MadO<span>.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="work.html" class="active">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn btn-primary"
+                            style="padding: 8px 20px; font-size: 0.9rem; color: #000; min-width: auto;">Let's Talk</a>
+                    </li>
+                </ul>
+
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <span class="close-menu">&times;</span>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
+        <div class="container hero-content">
+            <span class="hero-subtitle">Portfolio</span>
+            <h1 class="display-text hero-title">
+                <span class="text-shine-white">Selected</span> <br class="mobile-break">
+                <span class="text-shine">Works</span>
+            </h1>
+            <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem; color: var(--text-secondary);">
+                A collection of our favorite projects across branding, packaging, digital marketing, and more.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery Section -->
+    <section class="section-padding" style="padding-top: 50px;">
+        <div class="container">
+            <!-- Filter (Optional Enhancement) -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="packaging">Packaging</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="artworking">Artworking</button>
+            </div>
+
+            <div class="portfolio-grid-full" id="portfolioGrid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="packaging">
+                    <img src="assets/portfolio/project-1.jpg" alt="Packaging Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Packaging</span>
+                        <h3>Juice Brand Refresh</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="digital">
+                    <img src="assets/portfolio/project-2.jpg" alt="Social Media" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Digital Marketing</span>
+                        <h3>Tech Startup Campaign</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="assets/portfolio/project-3.jpg" alt="Branding" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Branding</span>
+                        <h3>Coffee Shop Identity</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="artworking">
+                    <img src="assets/portfolio/project-4.jpg" alt="Product Photography" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Photography</span>
+                        <h3>Luxury Watch Shoot</h3>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="assets/portfolio/project-5.jpg" alt="T-Shirt Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Design</span>
+                        <h3>Urban Streetwear</h3>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="assets/portfolio/project-6.jpg" alt="Logo Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Logo Design</span>
+                        <h3>Minimalist Logo</h3>
+                    </div>
+                </div>
+
+                <!-- New Project 7 -->
+                <div class="portfolio-item" data-category="artworking">
+                    <img src="assets/portfolio/project-7.jpg" alt="Artworking" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Artworking</span>
+                        <h3>Fashion Retouching</h3>
+                    </div>
+                </div>
+
+                <!-- New Project 8 -->
+                <div class="portfolio-item" data-category="packaging">
+                    <img src="assets/portfolio/project-8.jpg" alt="Packaging" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Packaging</span>
+                        <h3>Eco-Friendly Cosmetics</h3>
+                    </div>
+                </div>
+
+                <!-- New Project 9 -->
+                <div class="portfolio-item" data-category="branding">
+                    <img src="assets/portfolio/project-9.jpg" alt="Branding" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <span class="work-cat">Branding</span>
+                        <h3>Lifestyle Apparel</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding" style="background: #0e0e0e; border-top: 1px solid #1a1a1a;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Have a <span class="text-gradient">PROJECT</span> in mind?</h2>
+            <p
+                style="color: var(--text-secondary); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Let's collaborate and build something extraordinary together.
+            </p>
+            <a href="contact.html" class="btn btn-primary">Let's Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>MadO<span>.</span></h2>
+                    <div class="footer-info">
+                        <p>1st Floor Nandanam Building,<br>Near LULU Mall, Nattakom,<br>Kottayam, Kerala</p>
+                        <p><a href="mailto:info@madobrands.in" style="color: #fff;">info@madobrands.in</a></p>
+                        <p>+91 86230 25778</p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="branding.html">Branding</a></li>
+                        <li><a href="packaging.html">Packaging</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a href="artworking.html">Artworking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/madobrands/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/madobrands-india/" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/madobrandsindia/" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2026 MadO Brands. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
