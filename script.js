@@ -58,11 +58,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            // In a real app, you would send data to backend here
-            // For now, just redirect to thank you page
-            window.location.href = 'thank-you.html';
+
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        window.location.href = 'thank-you.html';
+                    } else {
+                        console.log(response);
+                        alert(json.message);
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert("Something went wrong!");
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 
@@ -228,4 +260,38 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // =========================================
+    // SECURITY DETERRENTS (Deterrence only)
+    // =========================================
+
+    // 1. Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // 2. Disable Keyboard Shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U)
+    document.addEventListener('keydown', (e) => {
+        // F12
+        if (e.keyCode === 123) {
+            e.preventDefault();
+            return false;
+        }
+
+        // Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+Shift+C (Element Select)
+        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+            e.preventDefault();
+            return false;
+        }
+
+        // Ctrl+U (View Source)
+        if (e.ctrlKey && e.keyCode === 85) {
+            e.preventDefault();
+            return false;
+        }
+
+        // Meta (Cmd) variants for Mac
+        if (e.metaKey && e.altKey && e.keyCode === 73) {
+            e.preventDefault();
+            return false;
+        }
+    });
 });

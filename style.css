@@ -951,11 +951,11 @@ h6 {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid #ddd;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
     padding: 15px;
     border-radius: 8px;
-    color: #000;
+    color: var(--text-primary);
     font-family: var(--font-main);
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -966,7 +966,8 @@ h6 {
 .form-group textarea:focus {
     border-color: var(--accent-color);
     outline: none;
-    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 4px rgba(83, 51, 237, 0.05);
+    background: #ffffff;
 }
 
 /* =========================================
