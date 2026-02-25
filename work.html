@@ -56,8 +56,8 @@
 
         .filter-btn {
             background: transparent;
-            border: 1px solid #333;
-            color: #888;
+            border: 1px solid #ddd;
+            color: #555;
             padding: 8px 20px;
             border-radius: 30px;
             cursor: pointer;
@@ -68,9 +68,9 @@
 
         .filter-btn.active,
         .filter-btn:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-            background: rgba(255, 69, 0, 0.05);
+            border-color: var(--accent-secondary);
+            color: #fff;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
         }
 
         .portfolio-grid-full {
@@ -100,7 +100,7 @@
                     <li><a href="work.html" class="active">Work</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html" class="btn btn-primary"
-                            style="padding: 8px 20px; font-size: 0.9rem; color: #000; min-width: auto;">Let's Talk</a>
+                            style="padding: 8px 20px; font-size: 0.9rem; min-width: auto;">Let's Talk</a>
                     </li>
                 </ul>
 
@@ -127,7 +127,7 @@
     <!-- Hero Section -->
     <section class="hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
         <div class="container hero-content">
-            <span class="hero-subtitle">Portfolio</span>
+            <span class="hero-subtitle text-gradient">Portfolio</span>
             <h1 class="display-text hero-title">
                 <span class="text-shine-white">Selected</span> <br class="mobile-break">
                 <span class="text-shine">Works</span>
@@ -297,7 +297,8 @@
     </div>
 
     <!-- CTA Section -->
-    <section class="section-padding" style="background: #0e0e0e; border-top: 1px solid #1a1a1a;">
+    <section class="section-padding"
+        style="background: var(--surface-color); border-top: 1px solid var(--border-color);">
         <div class="container" style="text-align: center;">
             <h2 class="section-title">Have a <span class="text-gradient">PROJECT</span> in mind?</h2>
             <p
@@ -316,7 +317,8 @@
                     <h2>MadO<span>.</span></h2>
                     <div class="footer-info">
                         <p>1st Floor Nandanam Building,<br>Near LULU Mall, Nattakom,<br>Kottayam, Kerala</p>
-                        <p><a href="mailto:info@madobrands.in" style="color: #fff;">info@madobrands.in</a></p>
+                        <p><a href="mailto:info@madobrands.in"
+                                style="color: var(--text-primary);">info@madobrands.in</a></p>
                         <p>+91 86230 25778</p>
                     </div>
                 </div>
