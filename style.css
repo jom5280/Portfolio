@@ -1003,6 +1003,151 @@ h6 {
     transition-delay: 0.05s;
 }
 
+.portfolio-item {
+    cursor: pointer;
+}
+
+/* =========================================
+   15. LIGHTBOX
+   ========================================= */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    /* Super high z-index */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 3.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+    z-index: 10001;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--accent-color);
+    color: #000;
+    border-color: var(--accent-color);
+}
+
+.lightbox-prev {
+    left: 40px;
+}
+
+.lightbox-next {
+    right: 40px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .lightbox-close {
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+    }
+}
+
+.lightbox-caption {
+    margin-top: 30px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.lightbox-caption h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.lightbox-caption p {
+    color: var(--accent-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
 .work-cat {
     text-transform: uppercase;
     font-size: 0.8rem;

@@ -125,4 +125,107 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxCat = document.getElementById('lightboxCat');
+        const closeBtn = document.querySelector('.lightbox-close');
+        const prevBtn = document.querySelector('.lightbox-prev');
+        const nextBtn = document.querySelector('.lightbox-next');
+
+        let currentIndex = 0;
+        let visibleItems = [];
+
+        function updateLightbox(index) {
+            if (!visibleItems[index]) return;
+
+            const item = visibleItems[index];
+            const img = item.querySelector('.portfolio-img');
+            const title = item.querySelector('h3');
+            const cat = item.querySelector('.work-cat');
+
+            if (img && lightboxImg) lightboxImg.src = img.src;
+            if (title && lightboxTitle) lightboxTitle.textContent = title.textContent;
+            if (cat && lightboxCat) lightboxCat.textContent = cat.textContent;
+
+            currentIndex = index;
+        }
+
+        function openLightbox(clickedItem) {
+            // Update visible items based on current display state
+            visibleItems = Array.from(portfolioItems).filter(item => {
+                return window.getComputedStyle(item).display !== 'none';
+            });
+
+            const newIndex = visibleItems.indexOf(clickedItem);
+            if (newIndex !== -1) {
+                updateLightbox(newIndex);
+                lightbox.classList.add('active');
+                document.body.classList.add('no-scroll');
+            }
+        }
+
+        // Use event delegation or ensure items exist
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                // Prevent default just in case it's a link
+                e.preventDefault();
+                openLightbox(item);
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        }
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        });
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (visibleItems.length > 0) {
+                    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+                    updateLightbox(currentIndex);
+                }
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (visibleItems.length > 0) {
+                    currentIndex = (currentIndex + 1) % visibleItems.length;
+                    updateLightbox(currentIndex);
+                }
+            });
+        }
+
+        // Keyboard controls
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            } else if (e.key === 'ArrowLeft' && visibleItems.length > 0) {
+                currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+                updateLightbox(currentIndex);
+            } else if (e.key === 'ArrowRight' && visibleItems.length > 0) {
+                currentIndex = (currentIndex + 1) % visibleItems.length;
+                updateLightbox(currentIndex);
+            }
+        });
+    }
 });
