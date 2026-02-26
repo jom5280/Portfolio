@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
 
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSW58P7RG"></script>
@@ -16,19 +18,45 @@
     </script>
 
     <!-- SEO Meta Tags -->
-    <title>Portfolio | Our Global Creative Work | MadO Brands</title>
-    <meta name="description"
-        content="Explore our international portfolio of branding, packaging, and digital projects for clients across the UK, USA, UAE, and India. Real results globally.">
+    <title>Our Work | Portfolio of International Branding & Design Projects | MadO Brands</title>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MadO Brands",
+      "image": "https://madobrands.in/assets/logo.png",
+      "@id": "https://madobrands.in/",
+      "url": "https://madobrands.in/",
+      "telephone": "+918623025778",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor Nandanam Building, Near LULU Mall, Nattakom",
+        "addressLocality": "Kottayam",
+        "addressRegion": "Kerala",
+        "postalCode": "686013",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["IN", "US", "GB", "AE"],
+      "priceRange": "$"
+    }
+    </script>
+    <meta name="description" content="Explore our international portfolio of branding, packaging, and digital projects. Real-world creative solutions for global brands by MadO Brands.">
     <meta name="keywords"
         content="Global Design Portfolio, Creative Work USA, Branding Showcase UK, Packaging Design UAE, MadO Brands Excellence">
     <meta name="author" content="MadO Brands">
     <link rel="canonical" href="https://madobrands.in/work.html">
+    <link rel="alternate" hreflang="x-default" href="https://madobrands.in/">
+    <link rel="alternate" hreflang="en" href="https://madobrands.in/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MadO Brands">
+    <meta property="og:image" content="https://madobrands.in/assets/logo.png">
 
     <!-- Open Graph (Social Media) -->
     <meta property="og:title" content="Our Work | MadO Brands">
     <meta property="og:description"
         content="A showcase of our best work in branding, packaging, and digital experiences. Think Madly with us.">
-    <meta property="og:image" content="https://madobrands.in/assets/og-image.jpg">
+    <meta property="og:image" content="https://madobrands.in/assets/og-image.webp">
     <meta property="og:url" content="https://madobrands.in/work.html">
     <meta property="og:type" content="website">
 
@@ -93,7 +121,7 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">MadO<span>.</span></a>
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="MadO Brands" class="logo-img"></a>
 
                 <ul class="nav-links">
                     <li><a href="index.html#services">Services</a></li>
@@ -157,7 +185,7 @@
                 <div class="portfolio-grid-full" id="portfolioGrid">
                     <!-- Project 1 -->
                     <div class="portfolio-item" data-category="packaging">
-                        <img src="assets/portfolio/packaging_design_01.jpg"
+                        <img src="assets/portfolio/packaging_design_01.webp"
                             alt="Artisanal Spice Blend Packaging Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Packaging</span>
@@ -167,7 +195,7 @@
 
                     <!-- Project 2 -->
                     <div class="portfolio-item" data-category="branding">
-                        <img src="assets/portfolio/branding_logo_design_01.jpg"
+                        <img src="assets/portfolio/branding_logo_design_01.webp"
                             alt="Modern Tech Identity Branding by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Branding</span>
@@ -177,7 +205,7 @@
 
                     <!-- Project 3 -->
                     <div class="portfolio-item" data-category="digital">
-                        <img src="assets/portfolio/social_media_02.jpg"
+                        <img src="assets/portfolio/social_media_02.webp"
                             alt="Summer Fashion Social Media Campaign by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Digital Marketing</span>
@@ -187,7 +215,7 @@
 
                     <!-- Project 4 -->
                     <div class="portfolio-item" data-category="print">
-                        <img src="assets/portfolio/poster_design_01.jpg"
+                        <img src="assets/portfolio/poster_design_01.webp"
                             alt="Music Festival Poster Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Print</span>
@@ -197,7 +225,7 @@
 
                     <!-- Project 5 -->
                     <div class="portfolio-item" data-category="merchandise">
-                        <img src="assets/portfolio/T-Shirt_design_01.jpg"
+                        <img src="assets/portfolio/T-Shirt_design_01.webp"
                             alt="Urban Streetwear Merchandise Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Merchandise</span>
@@ -207,7 +235,7 @@
 
                     <!-- Project 6 -->
                     <div class="portfolio-item" data-category="print">
-                        <img src="assets/portfolio/brochure_design_01.jpg"
+                        <img src="assets/portfolio/brochure_design_01.webp"
                             alt="Corporate Annual Report Brochure Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Print</span>
@@ -217,7 +245,7 @@
 
                     <!-- Project 7 -->
                     <div class="portfolio-item" data-category="photography">
-                        <img src="assets/portfolio/photo_retouching_01.jpg"
+                        <img src="assets/portfolio/photo_retouching_01.webp"
                             alt="High-End Beauty Photo Retouching by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Photography</span>
@@ -227,7 +255,7 @@
 
                     <!-- Project 8 -->
                     <div class="portfolio-item" data-category="packaging">
-                        <img src="assets/portfolio/packaging_design_02.jpg"
+                        <img src="assets/portfolio/packaging_design_02.webp"
                             alt="Premium Skincare Line Packaging Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Packaging</span>
@@ -237,7 +265,7 @@
 
                     <!-- Project 9 -->
                     <div class="portfolio-item" data-category="branding">
-                        <img src="assets/portfolio/branding_logo_design_02.jpg"
+                        <img src="assets/portfolio/branding_logo_design_02.webp"
                             alt="Sustainable Cafe Branding & Logo Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Branding</span>
@@ -247,7 +275,7 @@
 
                     <!-- Project 10 -->
                     <div class="portfolio-item" data-category="print">
-                        <img src="assets/portfolio/poster_design_02.jpg"
+                        <img src="assets/portfolio/poster_design_02.webp"
                             alt="International Film Fest Poster Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Print</span>
@@ -257,7 +285,7 @@
 
                     <!-- Project 11 -->
                     <div class="portfolio-item" data-category="print">
-                        <img src="assets/portfolio/brochure_design_02.jpg"
+                        <img src="assets/portfolio/brochure_design_02.webp"
                             alt="Luxury Real Estate Brochure Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Print</span>
@@ -267,7 +295,7 @@
 
                     <!-- Project 12 -->
                     <div class="portfolio-item" data-category="photography">
-                        <img src="assets/portfolio/photo_retouching_02.jpg"
+                        <img src="assets/portfolio/photo_retouching_02.webp"
                             alt="Automotive Product Photo Retouching by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Photography</span>
@@ -277,7 +305,7 @@
 
                     <!-- Project 13 -->
                     <div class="portfolio-item" data-category="print">
-                        <img src="assets/portfolio/poster_design_03.jpg"
+                        <img src="assets/portfolio/poster_design_03.webp"
                             alt="Creative Workshop Series Poster Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Print</span>
@@ -287,7 +315,7 @@
 
                     <!-- Project 14 -->
                     <div class="portfolio-item" data-category="packaging">
-                        <img src="assets/portfolio/packaging_design_03.jpg"
+                        <img src="assets/portfolio/packaging_design_03.webp"
                             alt="Eco-Friendly Beverage Packaging Design by MadO Brands" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="work-cat">Packaging</span>
@@ -332,11 +360,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h2>MadO<span>.</span></h2>
+                    <div class="footer-logo">MadO<span>.</span></div>
                     <div class="footer-info">
                         <p>1st Floor Nandanam Building,<br>Near LULU Mall, Nattakom,<br>Kottayam, Kerala</p>
-                        <p><a href="mailto:info@madobrands.in"
-                                style="color: var(--text-primary);">info@madobrands.in</a></p>
+                        <p><a href="mailto:info@madobrands.in" class="text-gradient" style="font-weight: 600;">info@madobrands.in</a></p>
                         <p>+91 86230 25778</p>
                     </div>
                 </div>
@@ -387,3 +414,12 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+

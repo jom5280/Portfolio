@@ -102,7 +102,7 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    /* Fallback */
+    display: inline-block;
 }
 
 /* Scroll Animation Classes */
@@ -207,16 +207,26 @@ h6 {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    color: #000;
-    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.logo span {
-    color: var(--accent-color);
+.logo-img {
+    height: 50px;
+    /* Resetting to a more standard height */
+    width: auto;
+    max-width: 180px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
+}
+
+
 
 .nav-links {
     display: flex;
@@ -339,27 +349,27 @@ h6 {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: bgSlide 20s infinite;
+    animation: bgSlide 14s infinite;
 }
 
 .hero-bg-slide:nth-child(1) {
     animation-delay: 0s;
-    background-image: url('assets/hero/hero-1.jpg');
+    background-image: url('assets/hero/hero-1.webp');
 }
 
 .hero-bg-slide:nth-child(2) {
-    animation-delay: 5s;
-    background-image: url('assets/hero/hero-2.jpg');
+    animation-delay: 3.5s;
+    background-image: url('assets/hero/hero-2.webp');
 }
 
 .hero-bg-slide:nth-child(3) {
-    animation-delay: 10s;
-    background-image: url('assets/hero/hero-3.jpg');
+    animation-delay: 7s;
+    background-image: url('assets/hero/hero-3.webp');
 }
 
 .hero-bg-slide:nth-child(4) {
-    animation-delay: 15s;
-    background-image: url('assets/hero/hero-4.jpg');
+    animation-delay: 10.5s;
+    background-image: url('assets/hero/hero-4.webp');
 }
 
 @keyframes bgSlide {
@@ -369,15 +379,15 @@ h6 {
     }
 
     5% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
 
-    /* Max opacity 10% */
+    /* Max opacity 20% */
+    20% {
+        opacity: 0.2;
+    }
+
     25% {
-        opacity: 0.1;
-    }
-
-    30% {
         opacity: 0;
     }
 
@@ -1396,3 +1406,4 @@ h6 {
 .team-social a:hover {
     color: var(--accent-color);
 }
+

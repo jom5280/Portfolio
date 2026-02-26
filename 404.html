@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
 
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFSW58P7RG"></script>
@@ -16,11 +18,38 @@
     </script>
 
     <title>404 - Page Not Found | MadO Brands Global</title>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MadO Brands",
+      "image": "https://madobrands.in/assets/logo.png",
+      "@id": "https://madobrands.in/",
+      "url": "https://madobrands.in/",
+      "telephone": "+918623025778",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor Nandanam Building, Near LULU Mall, Nattakom",
+        "addressLocality": "Kottayam",
+        "addressRegion": "Kerala",
+        "postalCode": "686013",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["IN", "US", "GB", "AE"],
+      "priceRange": "$"
+    }
+    </script>
     <meta name="description"
         content="The page you are looking for does not exist. Return to MadO Brands, your international partner for branding and design excellence.">
     <meta name="keywords" content="404 Page, Not Found, Creative Agency Kerala, Global Design Studio">
     <meta name="author" content="MadO Brands">
     <link rel="canonical" href="https://madobrands.in/404.html">
+    <link rel="alternate" hreflang="x-default" href="https://madobrands.in/">
+    <link rel="alternate" hreflang="en" href="https://madobrands.in/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="MadO Brands">
+    <meta property="og:image" content="https://madobrands.in/assets/logo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +70,7 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="index.html" class="logo">MadO<span>.</span></a>
+                <a href="index.html" class="logo"><img src="assets/logo.png" alt="MadO Brands" class="logo-img"></a>
 
                 <ul class="nav-links">
                     <li><a href="index.html#services">Services</a></li>
@@ -99,11 +128,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h2>MadO<span>.</span></h2>
+                    <div class="footer-logo">MadO<span>.</span></div>
                     <div class="footer-info">
                         <p>1st Floor Nandanam Building,<br>Near LULU Mall, Nattakom,<br>Kottayam, Kerala</p>
-                        <p><a href="mailto:info@madobrands.in"
-                                style="color: var(--text-primary);">info@madobrands.in</a></p>
+                        <p><a href="mailto:info@madobrands.in" class="text-gradient" style="font-weight: 600;">info@madobrands.in</a></p>
                         <p>+91 86230 25778</p>
                     </div>
                 </div>
@@ -153,3 +181,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
